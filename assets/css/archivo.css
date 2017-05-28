@@ -1,0 +1,277 @@
+
+/*
+Colors: 
+#E54E79;
+#E56385;
+#00B2A9;
+#75726C;
+#EDE9E2
+*/
+*{
+	margin: 0; /* permite mantener todos los márgenes ocupados y que nav ocupe por completo el alto y ancho de la pantalla*/
+	padding: 0; /* permite que los elementos contenidos partan de cero*/
+	font-family: 'Raleway', sans-serif;/* tipo de fuente */
+	font-size: 1em;
+}
+
+body {
+	
+	background: white;
+}
+
+/* navegación */
+nav {
+	background-color: #E54E79; /*color de fondo del nav o barra superior de navegacion*/
+	overflow: hidden;/*limpiar errores de float*/
+}
+
+.logo img{
+	padding: 10px;/* permite ampliar el nav*/
+	width: 60px; /* ancho del logo*/
+	margin: 0 200px;/* permite mover el logo hacia la derecha*/
+
+}
+
+ul{
+	float: right; /*floto los elementos a la derecha para que el logo quede a la izquierda*/
+	list-style-type: none; /*Elimino los estilos de lista*/
+	padding: 25px; /* permite posicionar los enlaces en el centro del nav, no más arriba ni más abajo*/
+}
+li{
+	float: left; /* Floto los li para que se dispongan horizontalmente */
+}
+
+ul li a{
+	
+	text-decoration: none;/*quito el subrayado que llevan los enlaces por defecto*/
+	color: #fff;/*le otorgo a los enlaces el color blanco*/
+	overflow: hidden;/*mantiene los cambios realizados en esta área*/
+	margin:0 50px; /* mantiene los enlaces separados */
+}
+
+ul li a:hover {
+
+	background: #75726C;/* al pasar el cursor por los enlaces presentes en el nav cambian de color */
+}
+
+/* características de fondo, la imagen la añadí desde html pues no resultó desde css*/
+
+.imagen-fondo{
+	overflow: hidden;/*mantiene cambios sin ser afectado*/
+	background-position: center;
+	position: relative;
+	background-size: cover;
+	height: 900px;
+}
+
+/*caja formulario turn miles into money*/
+.imagen-fondo .formulario{
+	background-color: #EDE9E2;
+	width: 500px;
+	height: 400px;
+	position: absolute;/*posiciona la caja formulario para ello necesita medidas en este caso derecha y arriba*/
+	right: 0px; 
+	top: 100px;
+}
+
+/*caracteristicas del título presente en la caja formulario*/
+.imagen-fondo .formulario h1{
+	color: #00B2A9;
+	font-size: 25px;
+	margin-top: 70px;
+	margin-left: 30px;
+}
+
+/*caracteristicas del subtitulo presente en la caja formulario*/
+.imagen-fondo .formulario h2{
+	color: #878c8d;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 30px;	
+}
+
+/*llamo al input para ingresar número de telefono para posicionarlo dentro de la caja*/
+input[type=text]{
+	background-color: #EDE9E2;
+	border: none;
+	border-bottom: 2px solid #878c8d;/*darle color a la línea de mi input*/
+	margin-top: 20px;
+	margin-left: 30px;	
+
+	}/* border: none y border-bottom permite que el input sea mostrado solo como una línea (la inferior) para ingresar los datos en este caso un número de teléfono*/
+
+	/*necesario para quitar borde azul que se crea al presionar los input en la pantalla*/
+
+	input[type=text]:focus{
+		outline:0px;
+	}
+
+	/*necesario para quitar borde azul que se crea al presionar los botones en la pantalla*/
+	button:focus{
+		outline: 0px;
+	}
+
+
+
+	/*características del botón dentro del formulario*/
+	.boton-corazon{
+		margin-top: 30px;
+		margin-left:30px;
+		background-color:  #E56385;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer; 
+		width: 300px;
+		height: 50px;
+		font-size: 15px;
+		box-shadow: 0 4px 2px -2px gray;/*imprime sombra debajo del botón*/
+	}
+
+	/*efecto css para que botón cambie de color al pasar el cursor arriba de este*/
+	.boton-corazon:hover {
+		background: rgba(0,0,0,0);
+		color: #3a7999;
+		box-shadow: inset 0 0 0 3px #3a7999;
+	}
+
+	/* permitir espacios dentro del parrafo y tamaño de fuente*/
+	p{
+		margin-top: 20px;
+		margin-left:30px;
+		font-size: 15px;
+	}
+
+	/*comienzo sección play with lift*/
+	.play-with-lyft{
+		background-color: #00B2A9;
+		height: 600px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+
+	}
+
+	/*franja de color plomo dentro del div que contiene la frase play with lyft. Características: ancho, alto, otros.*/
+	h3{
+		background-color: #EDE9E2;
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		right: 0px;
+		margin-top: 80px;
+		padding-top: 20px;/*la unica forma que conseguí que el texto quedara más al centro, este quedaba muy arriba*/
+		font-size:50px;
+		color:grey;
+		text-align: center;
+	}
+
+	/*caja donde van los inputs con el dibujo de los autos y sus coordenadas y el botón start*/
+
+	.autos{
+		background-color: #EDE9E2;
+		position: absolute;
+		width: 900px;
+		height: 250px;
+		margin-top: 270px;
+		margin-left: 230px;
+		display: inline;
+		float: left;
+	}
+
+	/*características del input auto 1, llamo a la clase que contiene el icono del auto mas el input type*/
+	.primer-auto{
+		position: absolute;
+		margin-left:100px;
+		margin-top: 50px;
+	}
+
+	/*características del input auto 2  llamo a la clase que contiene el icono del auto mas el input type*/
+	.segundo-auto{
+
+		float: right;
+		margin-right:200px;
+		margin-top: 50px;
+	}
+
+	/*características del botón start que se encuentra dentro de la caja autos debajo de los inputs*/
+	.start{
+		position: absolute;
+		margin-top: 150px;
+		margin-left:300px;
+		background-color: #00B2A9;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer; 
+		width: 300px;
+		height: 50px;
+		font-size: 15px;
+		box-shadow: 0 4px 2px -2px gray;/*imprime sombre debajo del botón*/
+	}
+	
+	/*efecto css para que botón cambie de color al pasar el cursor arriba de este*/
+	.start:hover {
+		background: rgba(0,0,0,0);
+		color: #3a7999;
+		box-shadow: inset 0 0 0 3px #3a7999;
+	}
+	/*características del cuadro color plomo*/
+	.cuadro{
+
+		background-color: grey;
+		height: 300px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	/*texto donde está contenido el título sprint 3-proyect*/
+	.content-uno{
+		color: #ede9e2;
+		margin-left: 100px;
+		font-weight: 400;
+		padding-top: 50px;
+		position: absolute;
+	}
+
+	/*parrafo cuyo clase es texto, características para posicionar el párrafo debajo del h4 clase content-uno(Sprint 3- proyect)*/
+	.texto{
+		color: #ede9e2;
+		margin-left: 0px;
+		font-weight: 100;
+		padding-top: 30px;
+
+	}
+
+	/*texto donde está contenido el título links*/
+	.content-dos {
+		float: right;
+		color: #ede9e2;
+		padding-top: 50px;
+		margin-right: 300px;
+		font-weight: 100;
+	}
+
+	/*características de los enlaces destinados a redes sociales*/
+	.content-dos a{
+		text-decoration: none;
+		color: #ede9e2;
+		padding: 30px;
+
+	}
+
+	/*pie de página editado*/
+	footer{
+		width: 100%;
+		height: 50px;
+		margin: 0;
+		background-color: #625f5b;
+		color: #ede9e2;
+		text-align: center;
+		font-style: oblique;
+		font-size: 20px;
+		display: inline-block;
+
+	}
+
